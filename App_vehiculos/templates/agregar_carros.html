@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="carousel-title">Bienvenidos a agregar carros</h1> 
+<br>
+<br>
+    <form action="{% url 'agregar_carros'%}" method="post"> {% csrf_token %}
+        {{ form_carro }}
+    <br>
+    <br>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary btn-block" value="Agregar">
+    </div>
+</form>
+{% endblock %}
