@@ -1,5 +1,5 @@
 # Intermediate_Task_Django
 
-superuser credentis
+superuser credentials
 username = admin
 password = password
