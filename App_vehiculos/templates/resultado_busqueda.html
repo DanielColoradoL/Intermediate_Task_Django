@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="carousel-title">Este es el resultado de la busqueda</h1> 
+
+{% if motos_seleccionadas %}
+<table>
+    {% for moto in motos_seleccionadas %}
+        <li>{{ moto.nombre }}</li>
+        <li>{{ moto.fabricante }}</li>
+        <li>{{ moto.cilindraje }}</li>
+        <br>
+    {% endfor %}
+</table>
+
+{% else %}
+
+<h2 style="color: white"> No hay motos que cumplan el criterio de busqueda!</h2>
+
+{% endif %}
+
+
+{% endblock %}

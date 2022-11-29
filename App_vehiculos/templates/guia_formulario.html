@@ -46,3 +46,14 @@
 {% titulo %}
 <h1 class="carousel-title">Bienvenidos al<br> index</h1>                          
 {% endblock %}
+
+
+Bienvenidos al<br> inicio
+
+<form action="{% url 'agregar_carros'%}" method="post"> {% csrf_token %}
+
+<select name="db" id="db">
+    <option value="r">Rojo</option>
+    <option value="a">Azul</option>
+    <option value="v">Verde</option>
+</select>

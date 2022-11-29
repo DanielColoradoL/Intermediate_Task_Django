@@ -3,5 +3,17 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="carousel-title">Bienvenidos a<br> agregar camiones</h1> 
+<h1 class="carousel-title">Bienvenidos a agregar camiones</h1> 
+<br>
+<br>
+    <form action="{% url 'agregar_camiones'%}" method="post"> {% csrf_token %}
+        <table>
+            {{ form_camion.as_table }}
+        </table>   
+    <br>
+    <br>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary btn-block" value="Agregar">
+    </div>
+</form>
 {% endblock %}
